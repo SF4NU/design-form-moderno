@@ -1,7 +1,8 @@
 body {
-    font-size: 15pt;
-    margin: 0;
-    font-family: poppins, arial;
+  font-size: 15pt;
+  margin: 0;
+  font-family: poppins, arial;
+  background-color: #202020;
 }
 .main-form {
   display: flex;
@@ -22,21 +23,21 @@ body {
   position: relative;
   opacity: 0.9;
 }
+.div-registration h1 {
+  transform: translateY(10px);
+}
 .privacy {
   display: flex;
-  font-size: 5px;
-  color: #D0D0D0;
+  font-size: 10px;
+  color: #d0d0d0;
   max-width: 180px;
   column-gap: 5px;
-}
-.privacy input {
-  
 }
 .password2 {
   font-size: 13pt;
 }
 .info div,
-.info-2 div{
+.info-2 div {
   display: flex;
   flex-direction: column;
   margin-bottom: 10px;
@@ -53,8 +54,8 @@ body {
 }
 .info div input::placeholder,
 .info-2 div input::placeholder {
-  color: #9B9B9B;
-  font-size: 12px
+  color: #9b9b9b;
+  font-size: 12px;
 }
 .info div input:focus,
 .info-2 div input:focus {
@@ -100,6 +101,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  transform: translateY(-13px);
 }
 .submit {
   display: flex;
@@ -108,13 +110,19 @@ body {
   width: 190px;
   margin-top: 10px;
 }
-
+#check {
+  cursor: pointer;
+}
 .submit-button {
   padding: 7px 15px;
   background-color: white;
   color: #5437d5;
   border-radius: 30px;
-  transition: opacity ease-out 0.25s, scale ease-out 0.25s, background-color ease-in 0.25s, color ease-in 0.25s;
+  transition: opacity ease-out 0.25s, scale ease-out 0.25s,
+    background-color ease-in 0.25s, color ease-in 0.25s;
+  user-select: none;
+  cursor: pointer;
+  transform: translateY(-6px);
 }
 .submit-button:hover {
   opacity: 0.88;
@@ -125,25 +133,27 @@ body {
   color: white;
 }
 .move-form {
- animation: move-form 2s ease-in-out forwards; 
+  animation: move-form 1s ease-in-out forwards;
 }
 .move-form2 {
-  animation: move-form-back 2s ease-in-out forwards;
+  animation: move-form-back 1s ease-in-out forwards;
 }
 
 @keyframes move-form {
-  from {}
+  from {
+  }
   to {
     transform: translateX(-230px);
     width: 240px;
   }
 }
 @keyframes move-form-back {
-  from {transform: translateX(-230px);
+  from {
+    transform: translateX(-230px);
     width: 240px;
   }
   to {
-    transform: translateX(230px);
+    transform: translateX(0px);
     width: 220px;
   }
 }
