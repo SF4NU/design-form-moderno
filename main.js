@@ -18,5 +18,6 @@ goToLogin.addEventListener("click", () => {
     isTrue = false;
     form.classList.remove("move-form");
     form.classList.add("move-form2");
+    goToLogin.textContent = "To Sign-In";
   }
 });
